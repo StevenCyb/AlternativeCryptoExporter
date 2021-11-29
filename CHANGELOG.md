@@ -2,7 +2,7 @@
 
 ## [0.1.0]
 ### Added
-- add ci
+- add ci and add `Dockerfile`
 - update readme/doc
 - add ticker logic and populate metrics
 - ticker routine and supported currency check
