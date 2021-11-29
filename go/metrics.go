@@ -22,7 +22,6 @@ var CryptoCurrencyTotalSupplyGauge *prometheus.GaugeVec
 var CryptoCurrencyMaxSupplyGauge *prometheus.GaugeVec
 
 func init() {
-
 	ResponseTimeHistogram = prometheus.NewHistogramVec(prometheus.HistogramOpts{
 		Name:    "http_server_request_duration_seconds",
 		Help:    "Histogram of response time for handler in seconds.",
@@ -73,7 +72,6 @@ func init() {
 	prometheus.MustRegister(CryptoCurrencyPriceChangePercentageGauge)
 }
 
-// Middleware return a handler that sits before a handler to collect metrics
 func metricsMiddleware(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
@@ -100,7 +98,6 @@ func startMetricsServer() {
 	}
 }
 
-// HandlerToHandlerFuncWrapper wrap a hander to use it as handler func
 func HandlerToHandlerFuncWrapper(handler http.Handler) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		handler.ServeHTTP(w, r)
