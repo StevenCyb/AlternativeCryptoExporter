@@ -18,5 +18,5 @@ func main() {
 	}
 
 	slog.Info(slog.EntryEvent("Run metrics server..."))
-	StartMetricsServer()
+	startMetricsServer()
 }
