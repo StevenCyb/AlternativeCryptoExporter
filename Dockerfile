@@ -50,5 +50,5 @@ COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certifi
 
 COPY --from=builder /dist/ace /
 
-USER authg:authg
+USER ace:ace
 ENTRYPOINT ["/ace"]
