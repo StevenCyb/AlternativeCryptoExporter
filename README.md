@@ -45,5 +45,14 @@ A list of possible values (name or symbol) for `-watch` can be obtained from [he
 | -quotes     | "USD"   | Currency to display crypto quotes e.g. {USD', 'EUR', 'GBP', 'RUB', 'JPY', 'CAD', 'KRW', 'PLN', 'BTC', 'ETH', 'XRP', 'LTC} |
 | -watch      | []      | Define currency to watch e.g. {'BTC', 'LTC'}                                                                              |
 
-## Run example
-TODO
+## Example
+Run example using:
+```
+docker-compose up
+```
+Stop example using:
+```
+docker-compose down
+```
+
+TODO and make public https://hub.docker.com/repository/docker/stevencyb/alternative-crypto-exporter

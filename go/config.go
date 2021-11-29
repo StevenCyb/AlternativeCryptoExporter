@@ -3,6 +3,9 @@ package main
 import (
 	"AlternativeCryptoExporter/model"
 	"flag"
+	"os"
+	"strconv"
+	"strings"
 )
 
 var (
@@ -20,4 +23,26 @@ func init() {
 	flag.Var(&currencyWatchlist, "watch", "Define currency to watch e.g. {'BTC', 'LTC'}")
 
 	flag.Parse()
+
+	tmp := os.Getenv("log-level")
+	if tmp != "" {
+		logLevel = string2Int(tmp)
+	}
+	tmp = os.Getenv("listen")
+	if tmp != "" {
+		listen = tmp
+	}
+	tmp = os.Getenv("quotes")
+	if tmp != "" {
+		quotes = tmp
+	}
+	tmp = os.Getenv("watch")
+	if tmp != "" {
+		currencyWatchlist = strings.Split(tmp, ",")
+	}
+}
+
+func string2Int(s string) int {
+	i, _ := strconv.Atoi(s)
+	return i
 }

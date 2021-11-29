@@ -1,5 +1,5 @@
 # Build executable binary
-FROM golang:alpine3.14 AS builder
+FROM golang:alpine3.13 AS builder
 
 ENV USER=authg
 ENV UID=1000
