@@ -1,5 +1,5 @@
 # Build executable binary
-FROM golang:alpine3.14 AS builder
+FROM golang:alpine3.13 AS builder
 
 ENV USER=authg
 ENV UID=1000
@@ -50,5 +50,5 @@ COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certifi
 
 COPY --from=builder /dist/ace /
 
-USER authg:authg
+USER ace:ace
 ENTRYPOINT ["/ace"]

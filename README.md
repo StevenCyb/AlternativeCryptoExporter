@@ -45,5 +45,19 @@ A list of possible values (name or symbol) for `-watch` can be obtained from [he
 | -quotes     | "USD"   | Currency to display crypto quotes e.g. {USD', 'EUR', 'GBP', 'RUB', 'JPY', 'CAD', 'KRW', 'PLN', 'BTC', 'ETH', 'XRP', 'LTC} |
 | -watch      | []      | Define currency to watch e.g. {'BTC', 'LTC'}                                                                              |
 
-## Run example
-TODO
+## Example
+
+<img src="./example.jpg" style="max-width: 650px">
+
+Execute the following comands on `./example`.
+Run example using:
+```
+docker-compose up
+```
+Now you can use [prometheus](http://localhost:9090/graph) for queries.
+Or check out the predefined [Grafana crypto dashboard](http://localhost:8081/d/PXTiXXtnk/ace_crypto?orgId=1) (User: `ace`, PW: `ace`). 
+
+Stop example using:
+```
+docker-compose down
+```
