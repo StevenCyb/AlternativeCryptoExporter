@@ -37,7 +37,7 @@ crypto_currency_volume_24h{id="1",name="Bitcoin",quotes="USD",symbol="BTC"} 3.28
 crypto_currency_volume_24h{id="1027",name="Ethereum",quotes="USD",symbol="ETH"} 2.133800858e+10
 ```
 ## Arguments
-A list of possible values (name or symbol) for `-watch` can be obtained from [here](https://api.alternative.me/v2/listings/).
+A list of possible values (`name` or `symbol`) for `-watch` can be obtained from [here](https://api.alternative.me/v2/listings/).
 | Argument    | Default | Description                                                                                                               |
 |-------------|---------|---------------------------------------------------------------------------------------------------------------------------|
 | -log-level  | 4       | Log level {'0' NONE, '1' FATAL, '2' ERROR, '3' WARNING, '4' INFO, '5' DEBUG}                                              |
